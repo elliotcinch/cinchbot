@@ -1,20 +1,153 @@
-html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+:root {
+  --font-family: "Buenos Aires", Avenir, Futura, Arial, SansSerif, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fafafa;
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-#app {
-	height: 100%;
+#preact_root {
+  width: 100vw;
+  height: 100vh;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-Black.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-Black.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-Black.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-BlackItalic.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-BlackItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-BlackItalic.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-BlackItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-SemiBold.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-SemiBold.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-Bold.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-Bold.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-BoldItalic.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-Book.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-Book.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-Book.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-BookItalic.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-BookItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-BookItalic.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-BookItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-Regular.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-Regular.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Buenos Aires";
+  src: url("/assets/fonts/BuenosAiresWeb-RegularItalic.eot");
+  src: url("/assets/fonts/BuenosAiresWeb-RegularItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/BuenosAiresWeb-RegularItalic.woff2") format("woff2"),
+    url("/assets/fonts/BuenosAiresWeb-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  unicode-range: U+000D-FB04;
 }

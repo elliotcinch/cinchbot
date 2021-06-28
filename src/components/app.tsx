@@ -1,6 +1,7 @@
 import { FunctionalComponent, h } from "preact";
 import { Route, Router } from "preact-router";
 import "normalize.css";
+import "@cinch-labs/design-system/dist/index.css";
 
 import Chatbot from "../routes/chatbot";
 

@@ -23,21 +23,25 @@
   },
   "dependencies": {
     "@cinch-labs/design-system": "^8.12.1",
+    "classnames": "^2.3.1",
     "normalize.css": "^8.0.1",
     "preact": "^10.3.1",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",
-    "swr": "^0.5.6"
+    "react-hook-form": "^7.9.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",
     "@types/jest": "^26.0.8",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-preact-pure": "^2.2.0",
     "eslint": "^6.8.0",
-    "eslint-config-preact": "^1.1.1",
+    "eslint-config-preact": "^1.1.4",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "jest": "^26.2.2",
     "jest-preset-preact": "^4.0.2",
