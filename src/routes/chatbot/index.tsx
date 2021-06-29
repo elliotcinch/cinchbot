@@ -24,6 +24,8 @@ export interface Message {
   id: string;
 }
 
+const botUserId = `${uuidv4()}`;
+
 const Chatbot: FunctionalComponent = () => {
   const [messages, setMessages] = useState<Message[]>(DEFAULTSTATE);
   const [isFetching, setIsFetching] = useState(false);
@@ -50,7 +52,7 @@ const Chatbot: FunctionalComponent = () => {
     setIsFetching(true);
     await postData(ENDPOINT, {
       text: userMessage,
-      botUserId: `${uuidv4()}`,
+      botUserId,
     })
       .then(async (resp: Message) => {
         const randomWait = random(4, 8) * 10;
